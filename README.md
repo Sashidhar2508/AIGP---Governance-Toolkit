@@ -30,6 +30,19 @@ Designed for portfolio demonstration of:
 
 ## Architecture
 
+```mermaid
+graph TD
+    A[AI System Description / Use Case] --> B[frameworks.py]
+    B --> C[risk_assessor.py]
+    C --> D[dpia.py]
+    C --> E[conformity.py]
+    D --> F[reports.py]
+    E --> F
+    F --> G[sample_assessment.md / .json]
+```
+
+**Component flow (text):**
+
 ```
 [AI System Description / Use Case]
               │
@@ -54,6 +67,18 @@ Designed for portfolio demonstration of:
     │  (JSON / Markdown)  │
     └─────────────────────┘
 ```
+
+See [ARCHITECTURE.md](ARCHITECTURE.md) for a deeper system view.
+
+---
+
+## Business & Governance Value
+
+Written from a Technical Account Manager / enterprise audit perspective:
+
+- **Enterprise ROI** — Automates a significant portion of manual model intake and risk questionnaire work, accelerating deployment timelines for data science and platform teams while giving TAMs a repeatable assessment pattern.
+- **Risk Mitigation** — Surfaces individual-impact, high-stakes domain, third-party model, and limited-oversight signals early; maps them to NIST AI RMF, EU AI Act, and ISO/IEC 42001 language so residual risk can be discussed clearly with legal, privacy, and business stakeholders.
+- **Audit Readiness** — Produces instant, structured Markdown and JSON evidence packs (DPIA drafts, conformity-style checklists, framework mappings) suitable for internal risk committees, customer governance reviews, and AIGP-style case discussions.
 
 ---
 
