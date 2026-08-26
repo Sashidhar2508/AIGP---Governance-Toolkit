@@ -1,0 +1,117 @@
+# AI Governance Assessment Report
+
+**Use Case:** Enterprise LLM Customer Support Agent
+**Generated (UTC):** 2026-08-26T06:34:57.088870+00:00
+**Toolkit:** AIGP Governance Toolkit
+
+## System Description
+
+LLM-powered agent assisting customers with product and billing queries, with escalation to human agents.
+
+**Sector:** general_enterprise
+**Data Categories:** customer_contact, transaction_history, support_tickets
+
+## Risk Summary
+
+- **Risk Score:** `0.6`
+- **Risk Level:** **HIGH**
+- **DPIA Recommended:** True
+- **HITL Recommended:** True
+
+### Risk Flags
+
+- `INDIVIDUAL_IMPACT_VIA_AUTOMATION`
+- `THIRD_PARTY_MODEL_SUPPLY_CHAIN`
+- `HITL_FEASIBLE`
+- `ELEVATED_RESIDUAL_RISK`
+
+### Key Findings
+
+- System can affect individuals through automated outputs or recommendations. Transparency and redress mechanisms should be considered.
+- Relies on a third-party model provider. Perform due diligence on data handling, security, sub-processors, and contractual AI terms.
+- Human-in-the-loop (HITL) is feasible. Design clear escalation paths and document override criteria for high-impact cases.
+- Composite risk signal is elevated. Prioritise DPIA, monitoring plan, and periodic re-evaluation under NIST AI RMF Manage function.
+- Map residual risks to NIST AI RMF (Govern/Map/Measure/Manage), EU AI Act transparency & oversight expectations, and ISO/IEC 42001 monitoring evidence.
+
+## EU AI Act Style Signals
+
+**Tier Hint:** LIMITED
+
+### Risk Signals
+
+- Potential impact on individuals via automated outputs
+- Relies on third-party foundation / frontier model
+
+### Suggested Obligations
+
+- Transparency to users that they are interacting with AI (where applicable)
+- Technical documentation and logging of system behaviour
+- Human oversight mechanisms for higher-risk scenarios
+
+## NIST AI RMF Mapping (Summary)
+
+### Govern
+- Define AI risk tolerance and accountability
+- Establish roles for AI oversight and escalation
+- Document third-party model / provider governance
+
+### Map
+- Inventory AI system context, intended use, and stakeholders
+- Identify data categories and potential harms
+- Classify risk level based on impact and domain
+
+### Measure
+- Define metrics for performance, fairness, drift, and robustness
+- Implement monitoring of outputs and decision outcomes
+- Track human override / escalation rates where HITL exists
+
+### Manage
+- Implement risk treatments (controls, HITL gates, fallbacks)
+- Plan incident response and model rollback procedures
+- Schedule periodic re-evaluation and continual improvement
+
+## DPIA Draft Snapshot
+
+**Title:** DPIA Draft – Enterprise LLM Customer Support Agent
+**DPIA Required Indicator:** True
+**Residual Risk Level:** HIGH
+
+### Risks to Rights & Freedoms
+
+- Potential impact on individuals’ rights and freedoms via automated outputs or decisions.
+- Risk of opaque or insufficiently explainable automated processing.
+- Third-party model processing may involve additional international transfers or sub-processors.
+
+### Mitigating Measures
+
+- Document intended purpose and lawful basis
+- Apply data minimisation and retention limits
+- Implement access controls and logging
+- Provide transparency notice to affected individuals where required
+- Human-in-the-loop review for high-impact or edge-case decisions
+- Contractual clauses and due diligence on model provider (security, sub-processors, data use)
+- Periodic re-assessment of residual risk and effectiveness of controls
+
+## Conformity-Style Checklist (Mock)
+
+**Applicable under current heuristics:** True
+
+| ID | Category | Item | Status |
+|----|----------|------|--------|
+| TD-01 | General Description | Intended purpose, provider identity, and version of the AI system | DRAFT |
+| TD-02 | General Description | How the system interacts with hardware/software and external systems | DRAFT |
+| TD-03 | Design & Development | Design specifications, model overview, and key design choices | DRAFT |
+| TD-04 | Data Governance | Training / validation data characteristics, provenance, and quality measures | DRAFT |
+| TD-05 | Risk Management | Risk management system description and residual risk treatment | DRAFT |
+| TD-06 | Monitoring | Post-market / post-deployment monitoring plan and metrics | DRAFT |
+| TD-07 | Human Oversight | Human oversight measures and instructions for operators | DRAFT |
+| TD-08 | Accuracy & Robustness | Accuracy, robustness, and cybersecurity measures | DRAFT |
+| TD-09 | Logging | Automatic logging of relevant events for traceability | DRAFT |
+| TD-10 | Instructions for Use | Clear instructions for deployers / users including limitations | DRAFT |
+| TD-11 | Third-Party Components | Documentation of third-party model / foundation model integration and responsibilities | DRAFT |
+
+---
+
+This output is generated for portfolio, learning, and internal discussion purposes. It does not constitute legal advice or formal conformity assessment.
+
+*Generated by AIGP Governance Toolkit (portfolio project)*

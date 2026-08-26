@@ -1,0 +1,185 @@
+{
+  "generated_at": "2026-08-26T06:34:57.088870+00:00",
+  "toolkit": "AIGP Governance Toolkit",
+  "use_case_key": "enterprise_llm_support_agent",
+  "use_case": {
+    "name": "Enterprise LLM Customer Support Agent",
+    "description": "LLM-powered agent assisting customers with product and billing queries, with escalation to human agents.",
+    "data_categories": [
+      "customer_contact",
+      "transaction_history",
+      "support_tickets"
+    ],
+    "automated_decision": true,
+    "affects_individuals": true,
+    "high_stakes_domain": false,
+    "third_party_model": true,
+    "human_in_the_loop_possible": true,
+    "sector": "general_enterprise"
+  },
+  "risk": {
+    "risk_score": 0.6,
+    "risk_level": "HIGH",
+    "risk_flags": [
+      "INDIVIDUAL_IMPACT_VIA_AUTOMATION",
+      "THIRD_PARTY_MODEL_SUPPLY_CHAIN",
+      "HITL_FEASIBLE",
+      "ELEVATED_RESIDUAL_RISK"
+    ],
+    "key_findings": [
+      "System can affect individuals through automated outputs or recommendations. Transparency and redress mechanisms should be considered.",
+      "Relies on a third-party model provider. Perform due diligence on data handling, security, sub-processors, and contractual AI terms.",
+      "Human-in-the-loop (HITL) is feasible. Design clear escalation paths and document override criteria for high-impact cases.",
+      "Composite risk signal is elevated. Prioritise DPIA, monitoring plan, and periodic re-evaluation under NIST AI RMF Manage function.",
+      "Map residual risks to NIST AI RMF (Govern/Map/Measure/Manage), EU AI Act transparency & oversight expectations, and ISO/IEC 42001 monitoring evidence."
+    ],
+    "hitl_recommended": true,
+    "dpia_recommended": true
+  },
+  "nist_ai_rmf": {
+    "Govern": [
+      "Define AI risk tolerance and accountability",
+      "Establish roles for AI oversight and escalation",
+      "Document third-party model / provider governance",
+      "Due diligence on model provider security & data handling"
+    ],
+    "Map": [
+      "Inventory AI system context, intended use, and stakeholders",
+      "Identify data categories and potential harms",
+      "Classify risk level based on impact and domain",
+      "Map supply-chain / third-party risk surface"
+    ],
+    "Measure": [
+      "Define metrics for performance, fairness, drift, and robustness",
+      "Implement monitoring of outputs and decision outcomes",
+      "Track human override / escalation rates where HITL exists"
+    ],
+    "Manage": [
+      "Implement risk treatments (controls, HITL gates, fallbacks)",
+      "Plan incident response and model rollback procedures",
+      "Schedule periodic re-evaluation and continual improvement"
+    ]
+  },
+  "eu_ai_act": {
+    "tier_hint": "LIMITED",
+    "risk_signals": [
+      "Potential impact on individuals via automated outputs",
+      "Relies on third-party foundation / frontier model"
+    ],
+    "suggested_obligations": [
+      "Transparency to users that they are interacting with AI (where applicable)",
+      "Technical documentation and logging of system behaviour",
+      "Human oversight mechanisms for higher-risk scenarios"
+    ]
+  },
+  "iso_42001": [
+    "AI policy and scope definition",
+    "Risk assessment and treatment records",
+    "Competence and awareness of AI roles",
+    "Operational planning and control of AI systems",
+    "Performance evaluation (monitoring, measurement, audit)",
+    "Continual improvement and management review",
+    "Supplier / third-party AI control and monitoring"
+  ],
+  "dpia": {
+    "title": "DPIA Draft – Enterprise LLM Customer Support Agent",
+    "system_description": "LLM-powered agent assisting customers with product and billing queries, with escalation to human agents.",
+    "data_categories": [
+      "customer_contact",
+      "transaction_history",
+      "support_tickets"
+    ],
+    "necessity": "The processing is considered necessary for the stated legitimate interest / contractual purpose of delivering the AI-enabled service. Alternatives (fully manual processes) may be less efficient or scalable.",
+    "proportionality": "Data minimisation and purpose limitation principles should be applied. Only categories required for the use case should be retained, with clear retention schedules.",
+    "risks_to_rights_and_freedoms": [
+      "Potential impact on individuals’ rights and freedoms via automated outputs or decisions.",
+      "Risk of opaque or insufficiently explainable automated processing.",
+      "Third-party model processing may involve additional international transfers or sub-processors."
+    ],
+    "mitigating_measures": [
+      "Document intended purpose and lawful basis",
+      "Apply data minimisation and retention limits",
+      "Implement access controls and logging",
+      "Provide transparency notice to affected individuals where required",
+      "Human-in-the-loop review for high-impact or edge-case decisions",
+      "Contractual clauses and due diligence on model provider (security, sub-processors, data use)",
+      "Periodic re-assessment of residual risk and effectiveness of controls"
+    ],
+    "dpia_required_indicator": true,
+    "residual_risk_level": "HIGH",
+    "consultation_notes": "Consult DPO / privacy counsel and relevant business owners before finalising. This draft is generated for portfolio and discussion purposes only."
+  },
+  "conformity_checklist": {
+    "applicable": true,
+    "note": "This is a mock conformity-style checklist for learning and portfolio purposes. Formal conformity assessment under the EU AI Act requires qualified assessment and complete technical documentation.",
+    "checklist": [
+      {
+        "id": "TD-01",
+        "category": "General Description",
+        "item": "Intended purpose, provider identity, and version of the AI system",
+        "status": "DRAFT"
+      },
+      {
+        "id": "TD-02",
+        "category": "General Description",
+        "item": "How the system interacts with hardware/software and external systems",
+        "status": "DRAFT"
+      },
+      {
+        "id": "TD-03",
+        "category": "Design & Development",
+        "item": "Design specifications, model overview, and key design choices",
+        "status": "DRAFT"
+      },
+      {
+        "id": "TD-04",
+        "category": "Data Governance",
+        "item": "Training / validation data characteristics, provenance, and quality measures",
+        "status": "DRAFT"
+      },
+      {
+        "id": "TD-05",
+        "category": "Risk Management",
+        "item": "Risk management system description and residual risk treatment",
+        "status": "DRAFT"
+      },
+      {
+        "id": "TD-06",
+        "category": "Monitoring",
+        "item": "Post-market / post-deployment monitoring plan and metrics",
+        "status": "DRAFT"
+      },
+      {
+        "id": "TD-07",
+        "category": "Human Oversight",
+        "item": "Human oversight measures and instructions for operators",
+        "status": "DRAFT"
+      },
+      {
+        "id": "TD-08",
+        "category": "Accuracy & Robustness",
+        "item": "Accuracy, robustness, and cybersecurity measures",
+        "status": "DRAFT"
+      },
+      {
+        "id": "TD-09",
+        "category": "Logging",
+        "item": "Automatic logging of relevant events for traceability",
+        "status": "DRAFT"
+      },
+      {
+        "id": "TD-10",
+        "category": "Instructions for Use",
+        "item": "Clear instructions for deployers / users including limitations",
+        "status": "DRAFT"
+      },
+      {
+        "id": "TD-11",
+        "category": "Third-Party Components",
+        "item": "Documentation of third-party model / foundation model integration and responsibilities",
+        "status": "DRAFT"
+      }
+    ]
+  },
+  "disclaimer": "This output is generated for portfolio, learning, and internal discussion purposes. It does not constitute legal advice or formal conformity assessment."
+}
